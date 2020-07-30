@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 public class TripulantesController {
 	
 	@Autowired
@@ -23,18 +23,18 @@ public class TripulantesController {
 	@Autowired
 	private TripulantesMapper tpMapper;
 	
-	@GetMapping("/tripulantes")
-	public ResponseEntity<List<TripulantesDTO>> findAll(){
-		List<Tripulantes> l =	triService.findAll();
-		return new ResponseEntity<List<TripulantesDTO>>(tpMapper.tripulantesToDTO(l),HttpStatus.OK);		
-	}
-	
-	@PostMapping("/tripulantes")
-	public ResponseEntity<List<TripulantesDTO>> generarTripulantes(int cantidad, int genero ){
-
-		return new ResponseEntity<List<TripulantesDTO>>(tpMapper.tripulantesToDTO(triService.generarTripulantes(cantidad, genero)),HttpStatus.OK);
-		
-	}
+//	@GetMapping("/rest/tripulantes")
+//	public ResponseEntity<List<TripulantesDTO>> findAll(){
+//		List<Tripulantes> l =	triService.findAll();
+//		return new ResponseEntity<List<TripulantesDTO>>(tpMapper.tripulantesToDTO(l),HttpStatus.OK);		
+//	}
+//	
+//	@PostMapping("/rest/tripulantes")
+//	public ResponseEntity<List<TripulantesDTO>> generarTripulantes(int cantidad, int genero ){
+//
+//		return new ResponseEntity<List<TripulantesDTO>>(tpMapper.tripulantesToDTO(triService.generarTripulantes(cantidad, genero)),HttpStatus.OK);
+//		
+//	}
 	
 	
 	
