@@ -23,13 +23,13 @@ public class TripulantesController {
 	@Autowired
 	private TripulantesMapper tpMapper;
 	
-	@GetMapping("/rest/tripulantes")
+	@GetMapping("/tripulantes")
 	public ResponseEntity<List<TripulantesDTO>> findAll(){
 		List<Tripulantes> l =	triService.findAll();
 		return new ResponseEntity<List<TripulantesDTO>>(tpMapper.tripulantesToDTO(l),HttpStatus.OK);		
 	}
 	
-	@PostMapping("/rest/tripulantes")
+	@PostMapping("/tripulantes")
 	public ResponseEntity<List<TripulantesDTO>> generarTripulantes(int cantidad, int genero ){
 
 		return new ResponseEntity<List<TripulantesDTO>>(tpMapper.tripulantesToDTO(triService.generarTripulantes(cantidad, genero)),HttpStatus.OK);
