@@ -13,4 +13,5 @@
       <result name="success">/tripulantes.jsp</result>
     </action>
   </package>
+
 </struts>

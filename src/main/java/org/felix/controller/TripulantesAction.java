@@ -7,10 +7,10 @@ import org.felix.service.TripulantesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.Action;
 
 @Component
-public class TripulantesAction extends ActionSupport{
+public class TripulantesAction implements Action{
 
 	private static final long serialVersionUID = 1L;
 

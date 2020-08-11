@@ -38,10 +38,8 @@
         </style>
     </head>
     <body>
-    <h1>User Information</h1>
-    <form action="post<%= %>">
-    
-    </form>   
+    <h1>Usuarios aleatorios</h1>
+ 
     <table>
         <tr>
             <th>id</th>
